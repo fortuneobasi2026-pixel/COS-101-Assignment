@@ -1,0 +1,62 @@
+# COS 101 - Physics Equations with Functions
+
+def equation1_velocity():
+    u = float(input("Enter u (initial velocity): "))
+    a = float(input("Enter a (acceleration): "))
+    t = float(input("Enter t (time): "))
+    v = u + a*t
+    print(f"v = u + at = {v}")
+
+def equation2_distance():
+    u = float(input("Enter u: "))
+    a = float(input("Enter a: "))
+    t = float(input("Enter t: "))
+    s = u*t + 0.5*a*t**2
+    print(f"s = ut + 0.5at^2 = {s}")
+
+def equation3_force():
+    m = float(input("Enter m (mass): "))
+    a = float(input("Enter a: "))
+    F = m*a
+    print(f"F = ma = {F}")
+
+def equation4_kinetic():
+    m = float(input("Enter m: "))
+    v = float(input("Enter v: "))
+    ke = 0.5*m*v**2
+    print(f"KE = 0.5mv^2 = {ke}")
+
+def equation5_potential():
+    m = float(input("Enter m: "))
+    g = float(input("Enter g (9.8): "))
+    h = float(input("Enter h (height): "))
+    pe = m*g*h
+    print(f"PE = mgh = {pe}")
+
+# MAIN LOOP - Y loop / while loop - runs forever until broken
+while True:
+    print("\n--- PHYSICS CALCULATOR ---")
+    print("1. Velocity (v = u + at)")
+    print("2. Distance (s = ut + 0.5at^2)")
+    print("3. Force (F = ma)")
+    print("4. Kinetic Energy (KE = 0.5mv^2)")
+    print("5. Potential Energy (PE = mgh)")
+    print("6. Exit")
+
+    choice = input("Press 1-5 to choose equation (or 6 to exit): ")
+
+    if choice == "1":
+        equation1_velocity()
+    elif choice == "2":
+        equation2_distance()
+    elif choice == "3":
+        equation3_force()
+    elif choice == "4":
+        equation4_kinetic()
+    elif choice == "5":
+        equation5_potential()
+    elif choice == "6":
+        print("Bye boss!")
+        break
+    else:
+        print("Invalid choice, try again")
